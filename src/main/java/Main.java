@@ -63,7 +63,7 @@ public class Main {
             try (InputStream instream = entity.getContent()) {
                 JAXBContext out = JAXBContext.newInstance(MELTSoutput.class);
                 MELTSoutput output = (MELTSoutput) out.createUnmarshaller().unmarshal(instream);
-                System.out.println(output.getBuildTime());
+                System.out.println(output.getPressure());
             }
         }
 
