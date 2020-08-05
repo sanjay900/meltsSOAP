@@ -98,12 +98,12 @@ public class Main {
         if (deltaP == 0) deltaP = 1;
         int numRunsP = (int) (Math.abs(p1 - p2) / deltaP + 1);
         int numRunsT = (int) (Math.abs(t1 - t2) / deltaT + 1);
-        int numRuns = Math.max(numRunsP, numRunsT);
-        int k = 0;
+        int numRuns = numRunsP * numRunsT;
         int newK = 0;
         String sessionID = "";
         System.out.println(numRuns);
-        while (k < numRuns) {
+        for (int k = 0; k < numRuns; k++) {
+            System.out.println(k +" - "+numRuns);
             if (k != 0) {
                 in = factory.createMELTSinput();
                 in.setSessionID(sessionID);
